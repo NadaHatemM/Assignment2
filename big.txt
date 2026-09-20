@@ -1,0 +1,6 @@
+This is a sample text file used to test Node.js readable streams.
+It contains multiple lines and enough characters so that when it is
+read using fs.createReadStream, the data is emitted in chunks rather
+than all at once. Streams are useful for handling large files
+efficiently without loading the whole file into memory at the same time.
+This line is just here to add a bit more length to the file.

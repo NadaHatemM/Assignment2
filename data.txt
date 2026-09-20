@@ -1,0 +1,1 @@
+This is the data file that will be read, compressed using zlib, and written to a new .gz file using a pipeline.
