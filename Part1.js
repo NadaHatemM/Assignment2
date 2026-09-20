@@ -95,8 +95,10 @@ console.log("-----------------------------");
 
 //Question 11
 function createFolder(folderPath) {
+if (!fs.existsSync(folderPath)) {
     fs.mkdirSync(folderPath);
-    console.log("sucess");
+}
+console.log("sucess");
 }
 createFolder('./test');
 
