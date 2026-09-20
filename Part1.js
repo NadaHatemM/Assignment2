@@ -1,10 +1,10 @@
 const path = require("path");
 //Question 1
 function showPath() {
-  console.log({
+console.log({
     File: __filename,
     Dir: __dirname,
-  });
+});
 }
 showPath();
 
@@ -12,7 +12,7 @@ console.log("-----------------------------");
 
 //Question 2
 function getFileName(filePath) {
-  return path.basename(filePath);
+return path.basename(filePath);
 }
 console.log(getFileName("/home/user/dir/report.pdf"));
 
@@ -20,7 +20,7 @@ console.log("-----------------------------");
 
 //Question 3
 function buildPath(obj) {
-  return path.format(obj);
+return path.format(obj);
 }
 console.log(buildPath({ dir: "/folder", name: "app", ext: ".js" }));
 
@@ -28,7 +28,7 @@ console.log("-----------------------------");
 
 //Question 4
 function getFileExtension(filePath) {
-  return path.extname(filePath);
+return path.extname(filePath);
 }
 console.log(getFileExtension("/docs/readme.md"));
 
@@ -36,8 +36,8 @@ console.log("-----------------------------");
 
 //Question 5
 function getNameAndExtension(filePath) {
-  const res = path.parse(filePath);
-  return { Name: res.name, Ext: res.ext };
+const res = path.parse(filePath);
+return { Name: res.name, Ext: res.ext };
 }
 console.log(getNameAndExtension("/home/app/main.js"));
 
@@ -45,7 +45,7 @@ console.log("-----------------------------");
 
 //Question 6
 function pathAbsolute(filePath) {
-  return path.isAbsolute(filePath);
+return path.isAbsolute(filePath);
 }
 console.log(pathAbsolute("/home/user/file.txt"));
 console.log(pathAbsolute("file.txt"));
@@ -54,7 +54,7 @@ console.log("-----------------------------");
 
 //Question 7
 function joinPaths(...paths) {
-  return path.join(...paths);
+return path.join(...paths);
 }
 console.log(joinPaths("src", "components", "App.js"));
 
@@ -62,7 +62,7 @@ console.log("-----------------------------");
 
 //Question 8
 function resolvePath(filePath) {
-  return path.resolve(filePath);
+return path.resolve(filePath);
 }
 console.log(resolvePath("./index.js"));
 
@@ -70,7 +70,7 @@ console.log("-----------------------------");
 
 //Question 9
 function joinTwoPaths(path1, path2) {
-  return path.join(path1, path2);
+return path.join(path1, path2);
 }
 console.log(joinTwoPaths("/folder1", "folder2/file.txt"));
 
@@ -79,26 +79,26 @@ console.log("-----------------------------");
 const fs = require("fs");
 
 //Question 10
-// function deleteFile(filePath) {
-// fs.unlink(filePath, (err) => {
-//     if (err) {
-//     console.log(err);
+function deleteFile(filePath) {
+fs.unlink(filePath, (err) => {
+    if (err) {
+    console.log(err);
 
-//     return;
-//     }
-//     console.log(`${path.basename(filePath)} is deleted.`);
-// });
-// }
-//  deleteFile('./file.txt');  // just added one so u can test
+    return;
+    }
+    console.log(`${path.basename(filePath)} is deleted.`);
+});
+}
+ deleteFile('./file.txt');  // just added one so u can test
 
 console.log("-----------------------------");
 
 //Question 11
-// function createFolder(folderPath) {
-//     fs.mkdirSync(folderPath);
-//     console.log("sucess");
-// }
-// createFolder('./test');
+function createFolder(folderPath) {
+    fs.mkdirSync(folderPath);
+    console.log("sucess");
+}
+createFolder('./test');
 
 console.log("-----------------------------");
 
@@ -107,7 +107,7 @@ const EventEmitter = require("events");
 const emitter = new EventEmitter();
 
 emitter.on("start", () => {
-  console.log("Welcome event triggered!");
+console.log("Welcome event triggered!");
 });
 
 emitter.emit("start");
